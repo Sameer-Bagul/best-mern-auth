@@ -4,4 +4,8 @@
 *{ 
   font-family: "Outfit", sans-serif;
 }
+* {
+  forced-color-adjust: auto;
+}
+
 

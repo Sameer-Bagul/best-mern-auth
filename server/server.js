@@ -12,9 +12,16 @@ const app = express();
 const port = 3000;
 connectDB();
 
+const allowedOrigins = ['http://localhost:5173']
+
 app.use(express.json());// Middleware for parsing application/json content-type in incoming requests
 app.use(cookieParser()); // Middleware for parsing cookies in incoming requests 
-app.use(cors({credentials: true})); // Middleware for enabling CORS (Cross-Origin Resource Sharing) in incoming requests 
+app.use(cors
+    ({
+        origin: allowedOrigins,
+        credentials: true
+    })
+); // Middleware for enabling CORS (Cross-Origin Resource Sharing) in incoming requests 
 
 // API Endpoints
 app.get('/', (req, res) => {
