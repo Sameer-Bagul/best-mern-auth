@@ -8,7 +8,7 @@ import { toast } from "react-toastify"
 const Navabr = () => {
 
   const navigate = useNavigate()
-  const { backendUrl, isLoggedin, setIsLoggedin, userData, setUserData, getUserData } = useContext(AppContext)
+  const { backendUrl, setIsLoggedin, userData, setUserData } = useContext(AppContext)
   
   const sendVerificationOtp = async () => {
     try {
